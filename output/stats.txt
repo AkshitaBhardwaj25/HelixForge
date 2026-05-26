@@ -1,0 +1,43 @@
+=== HelixForge Assembly Statistics ===
+
+Input
+  Reads processed   : 16713
+  Total k-mers      : 11290763
+  k-mer size (k)    : 13
+
+Graph
+  Nodes (V)         : 1051696
+  Edges (E)         : 823739
+
+Assembly
+  Method selected   : Hierholzer (Eulerian)
+  Dijkstra length   : 13 bp
+  Hierholzer length : 13 bp
+  Final length      : 13 bp
+  GC content        : 15.38 %
+  N50               : 13 bp
+
+Repeat Analysis (Suffix Array + LCP)
+  Min repeat length : 15 bp
+  Repeat regions    : 0
+
+Time Complexity (Theoretical)
+  Rolling Hash      : O(N)           one slide per character
+  Bloom Filter      : O(N)           constant insert/query
+  Graph Build       : O(V + E)       adjacency list
+  Dijkstra          : O((V+E) log V) min-heap relaxation
+  Hierholzer        : O(E)            each edge visited once
+  DP Correction     : O(N)           single pass
+  Suffix Array      : O(n log² n)    prefix doubling
+  LCP Array         : O(n)           Kasai's algorithm
+  Repeat Finding    : O(n)           LCP scan
+  Overall           : O(N + (V+E) log V + n log² n)
+
+Execution Time (Measured)
+  Total             : 14361.73 ms
+  Hashing           : 1526.79 ms
+  Graph Build       : 11153.28 ms
+  Dijkstra          : 739.19 ms
+  Hierholzer        : 657.66 ms
+  DP Correction     : 0.00 ms
+  Suffix Array+LCP  : 0.02 ms
