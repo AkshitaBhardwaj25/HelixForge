@@ -1,4 +1,4 @@
-# 🧬 HelixForge — De-Novo Genome Assembler
+# 🧬 HelixForge - Genome Assembler
 
 A complete genome assembler combining a **C++ DAA engine** with a **Python/Streamlit frontend** and an **interactive 3D De Bruijn graph visualizer**.
 
