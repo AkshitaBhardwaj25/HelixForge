@@ -79,7 +79,7 @@ Execution Time (Measured):
 
 ---
 
-## 🧩 DAA Module Details
+## Details
 
 ### 1. Rolling Hash (Rabin-Karp) — `O(1)` per k-mer
 Uses Mersenne prime modulus `2⁶¹ − 1` and `__uint128_t` multiplication to avoid overflow. The hash slides by removing the contribution of the leftmost base and adding the new rightmost base in constant time.
