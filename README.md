@@ -126,12 +126,19 @@ The assembler is designed for 100 MB+ files:
 
 ## 📐 Complexity Summary
 
-| Module | Theoretical | Notes |
-|--------|------------|-------|
-| FASTQ read | O(N) | N = total characters |
-| Rolling hash | O(N) | O(1) per k-mer step |
-| Bloom filter | O(N) | Constant-time hash |
-| Graph build | O(V + E) | Adjacency list |
-| Hierholzer | O(E) | Each edge visited once |
-| DP correction | O(n·m) | n, m = window size (≤50) |
-| **Overall** | **O(N + V + E)** | Linear in input + graph |
+| Module        | Theoretical      | Notes                   |
+|---------------|------------------|-------------------------|
+| FASTQ read    | O(N)             | N = total characters    |
+| Rolling hash  | O(N)             | O(1) per k-mer step     |
+| Bloom filter  | O(N)             | Constant-time hash      |
+| Graph build   | O(V + E)         | Adjacency list          |
+| Hierholzer    | O(E)             | Each edge visited once  |
+| DP correction | O(n·m)           | n, m = window size (≤50)|
+| **Overall**   | **O(N + V + E)** | Linear in input + graph |
+
+
+---
+
+# Author
+
+Akshita Bhardwaj
